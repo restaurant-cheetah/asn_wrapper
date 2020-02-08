@@ -1,0 +1,22 @@
+inherit_from:
+  - https://shopify.github.io/ruby-style-guide/rubocop.yml
+
+AllCops:
+  Exclude:
+    - 'asn_wrapper.gemspec'
+    - 'spec/spec_helper.rb'
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+  IgnoreMacros: true
+  IgnoredMethods:
+    - require
+    - require_relative
+    - require_dependency
+    - yield
+    - raise
+    - puts
+    - to
+    - not_to
+  Exclude:
+    - Gemfile
